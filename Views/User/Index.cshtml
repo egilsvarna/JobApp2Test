@@ -1,0 +1,20 @@
+﻿@model List<JobApp2.Models.Users>
+@{
+    ViewBag.Title = "Lietotāju saraksts";
+}
+
+<h2>Lietotāji</h2>
+<table class="table table-striped">
+    <tr>
+        <th>Vards</th>
+        <th>Uzvards</th>
+        <th></th>
+    </tr>
+    @foreach (var user in Model)
+    {
+        <tr>
+            <td>@user.Name</td>
+            <td>@user.Email</td>
+        </tr>
+    }
+</table>
